@@ -18,8 +18,16 @@ class RestaController extends Controller
         return view('list', ['data' => $data]);
     }
 
-    public  function add(Request $request){
+    public function add(Request $request)
+    {
 
-       return $request->input();
+//       return $request->input();
+        $restaurant = new Restaurant;
+        $restaurant->name = $request->input('name');
+        $restaurant->email = $request->input('email');
+        $restaurant->address = $request->input('address');
+        $restaurant->save();
+        $request->session()->flash('success_msg', 'Restaurant created successfully!!');
+        return redirect('/list');
     }
 }

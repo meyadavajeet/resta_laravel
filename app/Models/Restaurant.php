@@ -8,5 +8,5 @@ class Restaurant extends Model
 {
     //
     protected $table = 'restaurants';
-    public $timestamp = false;
+//    public $timestamp = false;
 }

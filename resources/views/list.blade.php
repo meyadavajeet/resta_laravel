@@ -4,6 +4,18 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        @if(Session::get('success_msg'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Success !!!</strong> {{Session::get('success_msg')}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
+                    </div>
+                </div>
                 <div class=" card card-primary">
                     <div class="card-header">List of all restaurants</div>
                     <div class=" table table-responsive">

@@ -26,4 +26,6 @@ Route::get('/edit/{id}','RestaController@edit');
 Route::post('/edit','RestaController@update');
 
 Route::view('/register','register');
-Route::post('/register','UserController@register');
+Route::post('/register','UsersController@register');
+Route::view('/login','login');
+Route::post('/login','UsersController@login');

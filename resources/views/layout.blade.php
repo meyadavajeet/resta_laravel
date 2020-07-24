@@ -39,12 +39,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/search">Search</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/register">Register</a>
-                </li>
+                @if(Session::get('user'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Hi, {{Session::get('user')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                @endif
             </ul>
         </div>
     </nav>

@@ -5,12 +5,12 @@
             <div class="col-sm-6">
                 <div class="card card-success">
                     <div class="card-header">
-                        Add Restaurant
-                        <a class="btn btn-warning float-right btn-sm" href="/list">  Restaurants List</a>
+                        User Registration
+                        <a class="btn btn-warning float-right btn-sm" href="/login">  Already register login here ...</a>
                     </div>
 
                     <div class="card-body">
-                        <form method="post" action="/add" enctype="multipart/form-data">
+                        <form method="post" action="/register" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
@@ -23,8 +23,8 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="address" class="form-label">Address</label>
-                               <textarea id="address" class="form-control" name="address"></textarea>
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-control" name="password" />
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

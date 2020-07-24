@@ -14,7 +14,8 @@
 {{--    Datatable css--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
-
+{{--    adding font awsome cdn--}}
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 <header>

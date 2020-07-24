@@ -21,3 +21,9 @@ Route::get('/list','RestaController@list');
 Route::view('/add','add');
 
 Route::post('/add','RestaController@add');
+Route::get('/delete/{id}','RestaController@delete');
+Route::get('/edit/{id}','RestaController@edit');
+Route::post('/edit','RestaController@update');
+
+Route::view('/register','register');
+Route::post('/register','UserController@register');

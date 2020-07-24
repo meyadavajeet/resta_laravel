@@ -16,17 +16,19 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/','RestaController@index');
-Route::get('/list','RestaController@list');
-Route::view('/add','add');
+//applying group route
+Route::group(['middleware'=>'web'],function(){
+    Route::get('/','RestaController@index');
+    Route::get('/list','RestaController@list');
+    Route::view('/add','add');
+    Route::post('/add','RestaController@add');
+    Route::get('/delete/{id}','RestaController@delete');
+    Route::get('/edit/{id}','RestaController@edit');
+    Route::post('/edit','RestaController@update');
+    Route::view('/register','register');
+    Route::post('/register','UsersController@register');
+    Route::view('/login','login');
+    Route::post('/login','UsersController@login');
+    Route::get('/logout','UsersController@logout');
+});
 
-Route::post('/add','RestaController@add');
-Route::get('/delete/{id}','RestaController@delete');
-Route::get('/edit/{id}','RestaController@edit');
-Route::post('/edit','RestaController@update');
-
-Route::view('/register','register');
-Route::post('/register','UsersController@register');
-Route::view('/login','login');
-Route::post('/login','UsersController@login');
-Route::get('/logout','UsersController@logout');

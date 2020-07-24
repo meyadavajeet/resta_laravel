@@ -36,9 +36,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/add">Add</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/search">Search</a>
-                </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link" href="/search">Search</a>--}}
+{{--                </li>--}}
                 @if(Session::get('user'))
                     <li class="nav-item">
                         <a class="nav-link" href="/register">Hi, {{Session::get('user')}}</a>

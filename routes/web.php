@@ -29,3 +29,4 @@ Route::view('/register','register');
 Route::post('/register','UsersController@register');
 Route::view('/login','login');
 Route::post('/login','UsersController@login');
+Route::get('/logout','UsersController@logout');

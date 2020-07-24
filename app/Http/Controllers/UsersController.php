@@ -28,4 +28,9 @@ class UsersController extends Controller
             return redirect('/');
         }
     }
+
+    function logout(){
+        session()->forget('user');
+        return redirect('/login');
+    }
 }

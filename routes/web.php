@@ -18,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/','RestaController@index');
 Route::get('/list','RestaController@list');
+Route::view('/add','add');
+
+Route::post('/add','RestaController@add');
